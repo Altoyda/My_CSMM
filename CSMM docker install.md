@@ -168,3 +168,32 @@ Once you have your .env file ready to go, you can start CSMM with `docker-compo
 
 TIP:
 You should set up a [reverse proxy](https://docs.csmm.app/en/CSMM/self-host/reverse-proxy.html) and enable HTTPS!
+
+#### Start CSMM with
+
+```bash
+docker compose up -d
+```
+
+Have a look at the logs to see if everything has started correctly with:
+
+```bash
+docker compose logs -f
+```
+
+To upgrade the containers, you must pull the new version:
+Check in your docker-compose.yml what image is specified (eg image: catalysm/csmm:v1.20) and adjust as needed.
+
+```bash
+docker compose pull
+```
+
+```bash
+docker compose down && docker compose up -d
+```
+
+If you'd like to force a pull you can use
+
+```bash
+sudo docker pull catalysm/csmm:${version}
+```
