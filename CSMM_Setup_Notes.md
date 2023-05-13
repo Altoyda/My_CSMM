@@ -1,8 +1,6 @@
 setup csmm
 	
-	cd /home/docker
-	git clone https://github.com/CatalysmsServerManager/7-days-to-die-server-manager
-	mv 7-days-to-die-server-manager csmm
+	
 	
 edit .env docker-compose.yml and Caddyfile
 
